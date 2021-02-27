@@ -1,11 +1,13 @@
+/*
 #include <iostream>
-#include "SerialPort.hpp"
+#include "include/SerialPort.hpp"
 #include <stdio.h>
 #include <string.h>
 
 using namespace std;
 
-char* portName = "\\\\.\\COM20";
+//char* portName = "\\\\.\\COM20";
+char* portName = "COM04";
 
 #define MAX_DATA_LENGTH 255
 
@@ -71,5 +73,22 @@ int main()
 {
     arduino = new SerialPort(portName);
 
-    autoConnect();   
+    autoConnect();
+}
+*/
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+
+    for (const string& word : msg)
+    {
+        cout << word << " ";
+    }
+    cout << endl;
 }
