@@ -1,13 +1,13 @@
-/*
+
 #include <iostream>
-#include "include/SerialPort.hpp"
+#include "SerialPort.cpp"
 #include <stdio.h>
 #include <string.h>
 
 using namespace std;
 
 //char* portName = "\\\\.\\COM20";
-char* portName = "COM04";
+const char* portName = "COM4";
 
 #define MAX_DATA_LENGTH 255
 
@@ -44,7 +44,7 @@ void exampleWriteData(unsigned int delayTime)
 
 void autoConnect(void)
 {
-    //better than recusion
+    //better than recursion
     //avoid stack overflows
     while(1) {
         // ui - searching
@@ -73,9 +73,11 @@ int main()
 {
     arduino = new SerialPort(portName);
 
-    autoConnect();
+    // autoConnect();
+
+    exampleReceiveData();
 }
-*/
+/*
 #include <iostream>
 #include <vector>
 #include <string>
@@ -92,3 +94,4 @@ int main()
     }
     cout << endl;
 }
+*/
