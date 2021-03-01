@@ -1,4 +1,4 @@
-#define BAUD 9600
+#define BAUD 115200
 #define DELAY_TIME 100
 
 const char* helloWorld = "Hello, world!";

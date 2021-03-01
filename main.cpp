@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "SerialPort.cpp"
+#include "SerialPort.hpp"
 #include <stdio.h>
 #include <string.h>
 
@@ -31,7 +31,7 @@ void exampleReceiveData(void)
 {
     int readResult = arduino->readSerialPort(incomingData, MAX_DATA_LENGTH);
     printf("%s", incomingData);
-    Sleep(10);
+    Sleep(20);
 }
 
 void exampleWriteData(unsigned int delayTime)

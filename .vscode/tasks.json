@@ -10,6 +10,7 @@
             "args": ["-g", "${file}",
                 "-I", "${fileDirname}\\include",
                 "-I", "${fileDirname}\\src",
+                "-g", "${fileDirname}\\include\\SerialPort.cpp",
                 "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
             "options": {
               "cwd": "${workspaceFolder}"
